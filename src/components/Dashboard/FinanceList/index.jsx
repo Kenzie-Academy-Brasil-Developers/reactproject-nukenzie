@@ -4,8 +4,7 @@ import logo from "./assets/NoCard.svg";
 import ListItem from "./ListItem";
 import ListFilter from "./ListFilter";
 
-const FinanceList = ({ finance, setFinance }) => {
-  const [filterList, setFilterList] = useState([]);
+const FinanceList = ({ finance, setFinance, filterList, setFilterList }) => {
   const [filterAuth, setFilterAuth] = useState(false);
 
   const removeFinance = (item) => {

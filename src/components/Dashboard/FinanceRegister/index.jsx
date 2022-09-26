@@ -1,10 +1,23 @@
 import { useState } from "react";
 import "./index.css";
-const FinanceRegister = ({ setFinance, children }) => {
+const FinanceRegister = ({ setFinance, setFilterList, children }) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [type, setType] = useState("");
   const [register, setRegister] = useState(0);
+
+  const filterReload = () => {
+    const btnActive = document.querySelector(".button-default--active");
+    if (btnActive.innerHTML == "Entradas") {
+      setFilterList((oldFinances) =>
+        oldFinances.filter(({ type }) => type == "Entrada")
+      );
+    } else if (btnActive.innerHTML == "Despesas") {
+      setFilterList((oldFinances) =>
+        oldFinances.filter(({ type }) => type == "Despesa")
+      );
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,7 +25,12 @@ const FinanceRegister = ({ setFinance, children }) => {
       ...oldFinances,
       { name: name, price: price, type: type, id: register },
     ]);
+    setFilterList((oldFilterList) => [
+      ...oldFilterList,
+      { name: name, price: price, type: type, id: register },
+    ]);
     setRegister(register + 1);
+    filterReload();
     setName("");
     setPrice("");
     setType("");
