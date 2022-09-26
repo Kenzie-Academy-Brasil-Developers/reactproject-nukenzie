@@ -24,6 +24,11 @@
     min-height: 90px;
 }
 
+.alert img {
+    margin-top: 26px;
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .secondColumn {
         width: 60%;

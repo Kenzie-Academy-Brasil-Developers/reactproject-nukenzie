@@ -1,5 +1,6 @@
 import "./index.css";
 import { useState } from "react";
+import logo from "./assets/NoCard.svg";
 import ListItem from "./ListItem";
 
 const FinanceList = ({ finance, setFinance }) => {
@@ -101,8 +102,11 @@ const FinanceList = ({ finance, setFinance }) => {
             );
           })
         ) : (
-          <div className="alert font-alert-1">
-            Você ainda não possui nenhum lançamento...
+          <div className="alert font-alert-1 flex-column">
+            <span className="font-alert-1">
+              Você ainda não possui nenhum lançamento...
+            </span>
+            <img src={logo} alt="" />
           </div>
         )}
       </ul>
