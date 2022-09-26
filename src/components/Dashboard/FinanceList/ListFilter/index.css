@@ -1,23 +1,20 @@
-.secondColumn {
-    width: 100%;
+.secondColumn__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.secondColumn__list {
-    margin-top: 30px;
-    gap: 32px;
-    min-height: 320px;
+.secondColumn__header h2 {
+    min-width: 142px;
 }
 
-.alert img {
-    margin-top: 26px;
-    width: 100%;
+.filter {
+    width: max-content;
+    display: flex;
+    gap: 16px;
 }
 
 @media (min-width: 768px) {
-    .secondColumn {
-        width: 60%;
-    }
-
     .secondColumn__header {
         display: flex;
         flex-direction: row;
