@@ -1,0 +1,18 @@
+.resume {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 24px 18px 24px;
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-2);
+}
+
+.resume__value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume__value>span {
+    color: var(--color-primary);
+}

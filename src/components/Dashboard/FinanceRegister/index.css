@@ -1,0 +1,80 @@
+.firstColumn {
+    width: 100%;
+    min-width: 200px;
+}
+
+.firstColumn form {
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-2);
+    padding: 38px 25px;
+    gap: 18px;
+}
+
+.form__description span {
+    color: var(--grey-3);
+}
+
+.firstColumn .value-input {
+    display: flex;
+}
+
+.input-default {
+    width: 100%;
+}
+
+.value-input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.value-input .input-group {
+    width: 45%;
+}
+
+.input-container .input-default:hover::placeholder {
+    color: black;
+}
+
+.input-container .icon {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    color: var(--grey-3);
+}
+
+.input-container .input-default {
+    padding: 0 32px 0 16px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.select-wrap {
+    position: relative;
+    background-color: var(--grey-1);
+    background-image: url(./ANGLE-DOWN.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 10px;
+    overflow: hidden;
+    height: 48px;
+}
+
+select.input-default {
+    outline: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .firstColumn {
+        width: 40%;
+    }
+}
